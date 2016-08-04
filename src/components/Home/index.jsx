@@ -4,7 +4,7 @@ export default class Home extends Component {
     handleSubmit(e) {
         e.preventDefault();
         const value = e.target.elements[0].value.toLowerCase();
-        this.context.router.push(`/genre/${value}`)
+        this.context.router.push(`/genre/${value}`);
     }
 
     render() {
