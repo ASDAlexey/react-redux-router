@@ -36,7 +36,11 @@ module.exports = {
         //     minRatio: 0.8
         // })
     ],
-    postcss: () => [autoprefixer],
+    postcss: () => [
+        autoprefixer({
+            browsers: ['last 2 versions'],
+        }),
+    ],
     module: {
         loaders: [
             {
