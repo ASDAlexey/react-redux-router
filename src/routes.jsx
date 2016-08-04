@@ -5,17 +5,22 @@ import App from './containers/App';
 import Admin from './components/Admin';
 import List from './components/List';
 import Genre from './components/Genre';
-import Release from './components/Release';s
+import Release from './components/Release';
 import Home from './components/Home';
 import NotFound from './components/NotFound';
 import Login from './components/Login';
+
+function checkLogin(nextState, replace) {
+    const login = window.localStorage.getItem('rr_login');
+    if (login !== 'admin') replace('/');
+}
 
 export const routes = (
     <div>
         <Route path="/" component={App}>
             <IndexRoute component={Home} />
             {/*<IndexRedirect to="list" />*/}
-            <Route path="/admin" component={Admin} />
+            <Route path="/admin" component={Admin} onEnter={checkLogin} />
             <Route path="/genre/:genre" component={Genre}>
                 {/*<Route path=":release" component={Release} />*/}
                 <Route path="/genre/:genre/:release" component={Release} />
