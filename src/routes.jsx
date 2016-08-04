@@ -13,6 +13,7 @@ export const routes = (
     <div>
         <Route path="/" component={App}>
             <IndexRoute component={Home} />
+            {/*<IndexRedirect to="list" />*/}
             <Route path="/admin" component={Admin} />
             <Route path="/genre/:genre" component={Genre}>
                 {/*<Route path=":release" component={Release} />*/}
