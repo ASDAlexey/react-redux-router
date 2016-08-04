@@ -1,0 +1,31 @@
+{
+  "extends": "airbnb",
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "rules": {
+    "react/prefer-stateless-function": "off",
+    "react/jsx-indent": "off",
+    "react/jsx-indent-props": "off",
+    "indent": [
+      "error",
+      4
+    ],
+    "no-use-before-define": 1,
+    "max-len": [
+      2,
+      120,
+      4,
+      {
+        "ignoreComments": true,
+        "ignoreUrls": true,
+        "ignorePattern": "^\\s*var\\s.+=\\s*require\\s*\\("
+      }
+    ]
+  },
+  "globals": {
+    "_": true,
+    "classNames": true
+  }
+}
