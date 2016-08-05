@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PropTypes, Component } from 'react';
 
 export default class Genre extends Component {
     render() {
@@ -22,3 +22,7 @@ export default class Genre extends Component {
         return template;
     }
 }
+
+Genre.contextTypes = {
+    params: PropTypes.object,
+};

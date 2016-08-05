@@ -10,20 +10,22 @@ import Home from './components/Home';
 import NotFound from './components/NotFound';
 import Login from './components/Login';
 
-export const routes = (
+const routes = (
     <div>
         <Route path="/" component={App}>
             <IndexRoute component={Home} />
-            {/*<IndexRedirect to="list" />*/}
+            {/* <IndexRedirect to="list" />*/}
             <Route path="/admin" component={Admin} onEnter={Admin.checkLogin} />
             <Route path="/genre/:genre" component={Genre}>
-                {/*<Route path=":release" component={Release} />*/}
+                {/* <Route path=":release" component={Release} />*/}
                 <Route path="/genre/:genre/:release" component={Release} />
             </Route>
             <Route path="/list" component={List} />
-            <Route path='/login' component={Login} />
+            <Route path="/login" component={Login} />
         </Route>
         <Route path="*" component={NotFound} />
     </div>
 );
+
+export default routes;
 

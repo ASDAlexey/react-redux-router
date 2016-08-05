@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PropTypes, Component } from 'react';
 
 export default class Release extends Component {
     render() {
@@ -10,3 +10,7 @@ export default class Release extends Component {
         );
     }
 }
+
+Release.propTypes = {
+    params: PropTypes.object,
+};

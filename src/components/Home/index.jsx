@@ -9,11 +9,11 @@ export default class Home extends Component {
 
     render() {
         return (
-            <div className='row'>
-                <div className='col-md-12'>Раздел /</div>
-                <form className='col-md-4' onSubmit={::this.handleSubmit}>
-                    <input type='text' placeholder='genreName' />
-                    <button type='submit'>Перейти</button>
+            <div className="row">
+                <div className="col-md-12">Раздел /</div>
+                <form className="col-md-4" onSubmit={::this.handleSubmit}>
+                    <input type="text" placeholder="genreName" />
+                    <button type="submit">Перейти</button>
                 </form>
             </div>
         );
@@ -21,5 +21,5 @@ export default class Home extends Component {
 }
 
 Home.contextTypes = {
-    router: PropTypes.object.isRequired
+    router: PropTypes.object.isRequired,
 };

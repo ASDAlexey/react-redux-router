@@ -1,13 +1,16 @@
 {
   "extends": "airbnb",
+  "parser": "babel-eslint",
   "env": {
     "browser": true,
     "node": true
   },
   "rules": {
-    "react/prefer-stateless-function": "off",
-    "react/jsx-indent": "off",
-    "react/jsx-indent-props": "off",
+    "strict": 0,
+    "react/jsx-no-bind": 0,
+    "react/prefer-stateless-function": 0,
+    "react/jsx-indent": 0,
+    "react/jsx-indent-props": 0,
     "indent": [
       "error",
       4
