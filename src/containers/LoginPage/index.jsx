@@ -3,7 +3,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as UserActions from '../../actions/UserActions';
 
-export class LoginPage extends Component {
+class LoginPage extends Component {
     handleSubmit(e) {
         e.preventDefault();
         this.props.actions.login({ name: e.target.elements[0].value });

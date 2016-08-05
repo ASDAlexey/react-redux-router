@@ -9,13 +9,14 @@ import Release from './components/Release';
 import Home from './components/Home';
 import NotFound from './components/NotFound';
 import LoginPage from './containers/LoginPage';
+import requireAuthentication from './containers/AuthenticatedComponent';
 
 const routes = (
     <div>
         <Route path="/" component={App}>
             <IndexRoute component={Home} />
             {/* <IndexRedirect to="list" />*/}
-            <Route path="/admin" component={Admin} onEnter={Admin.checkLogin} />
+            <Route path="/admin" component={requireAuthentication(Admin)} />
             <Route path="/genre/:genre" component={Genre}>
                 {/* <Route path=":release" component={Release} />*/}
                 <Route path="/genre/:genre/:release" component={Release} />
