@@ -1,10 +1,18 @@
 import React, { Component, PropTypes } from 'react';
 
 export default class Home extends Component {
+    componentDidMount() {
+        this.context.router.setRouteLeaveHook(this.props.route, this.routerWillLeave);
+    }
+
     handleSubmit(e) {
         e.preventDefault();
         const value = e.target.elements[0].value.toLowerCase();
         this.context.router.push(`/genre/${value}`);
+    }
+
+    routerWillLeave() {
+        return 'Вы уверены?';
     }
 
     render() {
@@ -22,4 +30,8 @@ export default class Home extends Component {
 
 Home.contextTypes = {
     router: PropTypes.object.isRequired,
+};
+
+Home.propTypes = {
+    route: PropTypes.object.isRequired,
 };
