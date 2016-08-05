@@ -1,5 +1,5 @@
-# react-course
+### react-router-redux
 
-* Init project:
-npm i
-sudo npm link webpack-dev-server# react-redux-router
+### Init project
+1. npm i
+2. sudo npm link webpack-dev-server
