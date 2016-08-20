@@ -6,9 +6,10 @@ new WebPackDevServer(webpack(config), {
     publicPath: config.output.publicPath,
     hot: true,
     historyApiFallback: true,
-}).listen(8080, 'localhost', (err, result) => {
-    if (err) {
-        return console.log(err);
-    }
-    console.log('Listening on localhost:8080');
+    watchOptions: {
+        poll: true
+    },
+}).listen(8080, '0.0.0.0', (err) => {
+    msg = err ? err : 'Listening on localhost:8080';
+    console.log(msg);
 });
