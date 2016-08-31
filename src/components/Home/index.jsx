@@ -1,6 +1,14 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component, PropTypes } from "react";
 
 export default class Home extends Component {
+    static contextTypes = {
+        router: PropTypes.object.isRequired,
+    };
+
+    static propTypes = {
+        route: PropTypes.object.isRequired,
+    };
+
     componentDidMount() {
         this.context.router.setRouteLeaveHook(this.props.route, this.routerWillLeave);
     }
@@ -27,11 +35,3 @@ export default class Home extends Component {
         );
     }
 }
-
-Home.contextTypes = {
-    router: PropTypes.object.isRequired,
-};
-
-Home.propTypes = {
-    route: PropTypes.object.isRequired,
-};
