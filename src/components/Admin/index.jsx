@@ -2,7 +2,10 @@ import React, { Component } from 'react';
 
 export default class Admin extends Component {
     static checkLogin(nextState, replace) {
-
+        var a = [
+            'aa',
+            'ddd'
+        ]
     }
 
     render() {
